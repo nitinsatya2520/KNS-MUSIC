@@ -1,38 +1,209 @@
-.App {
+/* App.css */
+
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* App Container */
+.app {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Now Playing */
+.now-playing {
   text-align: center;
+  margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.now-playing h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #bb86fc;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.now-playing h3 {
+  margin: 5px 0;
+  font-size: 18px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Player Controls */
+/* App.css */
+
+/* App.css */
+
+/* Container for the player */
+.player {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: #1e1e1e;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+/* Thumbnail container */
+.thumbnail-container {
+  width: 100%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 15px;
+}
+
+.thumbnail {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Player controls */
+.player-controls {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.player-controls button {
+  background: #bb86fc;
+  border: none;
   color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.player-controls button:hover {
+  background: #bb86fc;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Volume and playback rate controls */
+.volume-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.volume-controls input[type="range"] {
+  width: 100%;
+  max-width: 200px;
+}
+
+.volume-controls select {
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* Progress container */
+.progress-container {
+  width: 100%;
+  background: #333;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 8px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.progress {
+  background: #007bff;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* Time display */
+.time {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .player {
+    padding: 15px;
+    margin: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .thumbnail {
+    max-width: 150px;
   }
+
+  .player-controls button {
+    padding: 8px 12px;
+  }
+}
+
+
+/* Playlist */
+.playlist {
+  margin-top: 20px;
+}
+
+.playlist h2 {
+  font-size: 22px;
+  color: #bb86fc;
+}
+
+.playlist ul {
+  list-style: none;
+  padding: 0;
+}
+
+.playlist li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.playlist li:hover {
+  background: #333;
+}
+
+/* File Upload */
+.custom-file-upload {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  margin: 20px auto;
+  background: #bb86fc;
+  color: #121212;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-file-upload:hover {
+  background: #9b4dff;
+}
+
+input[type="file"] {
+  display: none;
 }
