@@ -9,11 +9,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%; /* Full viewport height */
-<<<<<<< HEAD
-  
-=======
-  overflow: hidden; /* Prevent overflow */
->>>>>>> d880fe2b248c3610024820fcac751ac43014212b
 }
 
 /* App Container */
