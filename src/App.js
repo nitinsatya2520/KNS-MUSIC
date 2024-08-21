@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './App.css';
+import MusicSearch from './MusicSearch';
+
 
 // NowPlaying Component
 const NowPlaying = ({ track }) => (
@@ -197,6 +199,7 @@ function App() {
 
   return (
     <div className="app">
+      
       <input
         type="file"
         id="file-upload"
@@ -218,6 +221,7 @@ function App() {
         />
       )}
       <Playlist tracks={tracks} onTrackSelect={handleTrackSelect} />
+      <MusicSearch />
     </div>
   );
 }
