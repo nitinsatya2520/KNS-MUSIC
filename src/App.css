@@ -1,5 +1,3 @@
-/* App.css */
-
 /* Global Styles */
 body {
   font-family: 'Arial', sans-serif;
@@ -10,7 +8,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%; /* Full viewport height */
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Prevent overflow */
 }
 
 /* App Container */
@@ -156,9 +155,14 @@ body {
 
 /* Responsive Design */
 @media (max-width: 600px) {
+  .app {
+    margin: 20px; /* Adjust margin for mobile view */
+    padding: 10px;
+  }
+
   .player {
     padding: 15px;
-    margin: 10px;
+    margin: 10px 0;
   }
 
   .thumbnail {
@@ -167,6 +171,15 @@ body {
 
   .player-controls button {
     padding: 8px 14px;
+  }
+
+  .custom-file-upload {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .playlist h2 {
+    font-size: 22px; /* Slightly smaller heading for mobile */
   }
 }
 
