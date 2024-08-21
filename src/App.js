@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './App.css';
 import MusicSearch from './MusicSearch';
-
+import Cd from './assets/K_N_S__1_-removebg-preview.png';
 
 // NowPlaying Component
 const NowPlaying = ({ track }) => (
@@ -85,13 +85,10 @@ const Player = ({ track, onNext, onPrevious, onShuffleToggle, isShuffle }) => {
 
   return (
     <div className="player">
+
       <div className="thumbnail-container">
         {track.thumbnail && (
-          <img
-            src={track.thumbnail}
-            alt="Thumbnail"
-            className="thumbnail"
-          />
+          <img src={Cd} className="thumbnail" alt="logo" />
         )}
       </div>
       <div className="player-controls">

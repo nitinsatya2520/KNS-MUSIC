@@ -8,8 +8,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full viewport height */
-  overflow: hidden; /* Prevent overflow */
+  height: 100%; /* Full viewport height */
+  
 }
 
 /* App Container */
@@ -66,17 +66,29 @@ body {
   justify-content: center;
   margin-bottom: 15px;
 }
-
-.thumbnail {
-  width: 100%;
-  max-width: 220px; /* Slightly larger thumbnail */
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease;
+.thumbnai {
+  height: 20vmin;
+  pointer-events: none;
 }
 
-.thumbnail:hover {
-  transform: scale(1.05); /* Zoom effect on hover */
+.thumbnail {
+  height: 40vmin;
+  width: 40vmin;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .thumbnail {
+    animation: thumbnail-spin infinite 9s linear;
+  }
+}
+
+@keyframes thumbnail-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .player-controls {
@@ -155,8 +167,22 @@ body {
 
 /* Responsive Design */
 @media (max-width: 600px) {
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Full viewport height */
+    
+  }
+  
   .app {
-    margin: 20px; /* Adjust margin for mobile view */
+    margin: 100px auto 20px auto;
+    /* Adjust margin for mobile view */
     padding: 10px;
   }
 

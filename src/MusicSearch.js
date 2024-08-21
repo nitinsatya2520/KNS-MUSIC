@@ -16,7 +16,7 @@ const MusicSearch = () => {
           limit: 30,
         },
         headers: {
-          Authorization: `Bearer BQAKlvTX7asYTzidaTN4Q43mZrqUjFKRr0HwipnhlE1lJwi005tWlfnTv0DmazGkH_1ybydlgdf5GF-wKjcTrGngTWZO17PZL2nDA7j71gJ-gpNZ416yaUXVxbjDkCKVlrQxI4HLE_SDqktnJt3lHo0FIZGrKrRzQ_RcYaQ27w1iVEE5l4sSJAfugV8Hs3YwYnjccnXlmtUYIh5M9SY2C7rkuelv46i2vaYa5gMTG6CJX162h6FEtAHBWQ8tw5bQOMSPZ4h9JHlacmKnjTPq5Q`, // Replace with your actual token
+          Authorization: `Bearer BQCTAUS7zh0haSJP5Zxb_ogem67cxL6HCIKpit2SwQk1Bd7qLP0FYdpT0L9q4LWFiJz_zrKLwagn_f2-ATgO3K89bKhsdF7sY3QQDET_lOXeGH7Bf8ZaT88SE_BO69I7LlzBKdhFFRr5I-sX7Aj2q90IbJOiMGuX5BrFHuMdLhwhPhM0L9PuvYhvDh0pPFDTdBkIAfoimKVO-N8fHm75y6PFZJIzsCv2sJgUk27VOAaJdJd2tC1SImAo-a3JkWRODXU0ji66ZkKa5M47ef9Eag`, // Replace with your actual token
         },
       });
       setTracks(response.data.tracks.items);
