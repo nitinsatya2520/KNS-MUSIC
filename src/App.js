@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import './App.css';
 import MusicSearch from './MusicSearch';
 import Cd from './assets/K_N_S__1_-removebg-preview.png';
+import CCd from './K_N_S__1_-removebg-preview.svg';
 
 // NowPlaying Component
 const NowPlaying = ({ track }) => (
@@ -87,8 +88,10 @@ const Player = ({ track, onNext, onPrevious, onShuffleToggle, isShuffle }) => {
     <div className="player">
 
       <div className="thumbnail-container">
+      <img src={Cd} className="thumbnail" alt="logo" />
         {track.thumbnail && (
-          <img src={Cd} className="thumbnail" alt="logo" />
+          <img src={CCd} className="thumbnail" alt="logo" />
+          
         )}
       </div>
       <div className="player-controls">
